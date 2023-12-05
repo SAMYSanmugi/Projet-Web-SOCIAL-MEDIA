@@ -1,0 +1,66 @@
+#header {
+	text-align: center;
+	background-color: navajowhite;
+}
+body{
+	background-color: blanchedalmond;
+}
+#nav{
+	background-color: navajowhite;
+	text-align: center;
+}		
+#fin{
+	text-align: center;
+}
+#icone{
+	height : 70px;
+	width : 85px;
+	margin-right:30px;
+}
+
+#leftcolumn {
+	float: left;
+	width: 30%;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	margin-left: 8%;
+	border-radius: 3%;
+}
+#rightcolumn {
+	margin-left: 30%;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	margin-right: 8%;
+}
+
+.Emplois {
+  max-width: 400px;
+  max-height: 400px;
+  overflow: auto;
+  padding: 1rem;
+  background: skyblue;
+  direction: ltl; //rtl
+}
+#Emplois_element {
+  padding: 5px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	border-color: black;
+	background-color: plum;
+}
+.Details {
+  max-width: 800px;
+  max-height: 400px;
+  overflow: auto;
+  padding: 1rem;
+  background: skyblue;
+  direction: ltl; //rtl
+}
+ 
+#Details_element {
+  padding: 5px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	border-color: black;
+	background-color: limegreen;}
+
