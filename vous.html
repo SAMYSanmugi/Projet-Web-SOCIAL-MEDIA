@@ -7,12 +7,11 @@
 	<script type="text/javascript" src="vous.js"></script>
 	<style type="text/css" src="vous.css"></style>
 </head>
-
 <body>
 	<h1>Décrivez-vous pour surprendre les autres !!</h1>
 
 	<form id="form1" action="vous.php" method="post">
-		<h3>Renseignez vos coordonnées ici</h3>
+		<h3>Pour commncer, renseignez vos coordonnées :</h3>
 		<table border="1">
 			<tr>
 				<td>Nom</td>
@@ -44,7 +43,7 @@
 	</form>
 
 	<form id="form2" action="vous.php" method="post" style="display: none;">
-		<h3>Veuillez énumérer vos compétences ici, appuyez sur le boutton + afin de rajouter une compétence</h3>
+		<h3>Veuillez énumérer vos compétences ici, appuyez sur le boutton '+' afin de rajouter une compétence :</h3>
 		<table border="1" id="competencesTable">
 			<tr>
 				<td>Compétence 1</td>
@@ -73,7 +72,7 @@
 	</form>
 
 	<form id="form4" action="vous.php" method="post" style="display: none;">
-		<h3>Veuillez nous indiquer quelles langues parlez-vous</h3>
+		<h3>Veuillez nous indiquer vos compétences linguistiques :</h3>
 		<table border="1" id="languesTable">
 			<tr>
 				<td>Langue 1</td>
@@ -89,7 +88,7 @@
 	</form>
 
 	<form id="form5" action="vous.php" method="post" style="display: none;">
-		<h3>Veuillez décrire votre profil en quelques lignes</h3>
+		<h3>Veuillez vous décrire en quelques lignes :</h3>
 		<table border="1">
 			<tr>
 				<td>Profil</td>
@@ -102,7 +101,7 @@
 	</form>
 
 	<form id="form6" action="vous.php" method="post" style="display: none;">
-		<h3>Avez-vous eu de l'expérience ou bien réalisé des projets à l'école, veuillez les décrire ici</h3>
+		<h3>Avez-vous eu de l'expérience ou bien réalisé des projets à l'école ? Veuillez les décrire ici :</h3>
 		<table border="1">
 			<tr>
 				<td>Expérience</td>
@@ -115,7 +114,7 @@
 	</form>
 
 	<form id="form7" action="vous.php" method="post" style="display: none;">
-		<h3>Pour finir quelle formation avez-vous suivi au cours de votre parcours</h3>
+		<h3>Pour finir, quelles formations avez-vous suivi au cours de votre parcours :</h3>
 		<table border="1"> 
 			<tr>
 				<td>Formation</td>
@@ -125,8 +124,6 @@
 		<br>
 		<button type="button" name="precedent" onclick="afficherPrecedentSix()">Précédent</button>
 		<button type="submit" name="soumettre">Générer le CV</button>
-	</form>
-
-	
+	</form>	
 </body>
 </html>
