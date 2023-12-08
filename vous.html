@@ -40,8 +40,8 @@
 			</tr>
 		</table>
 		<br>
-	    <button type="button" name="suivant" onclick="afficherFormulaireDeux()">Valider</button>
-	</form><br>
+	    <button type="button" name="suivant" onclick="afficherFormulaireDeux()">Suivant</button>
+	</form>
 
 	<form id="form2" action="vous.php" method="post" style="display: none;">
 		<h3>Veuillez énumérer vos compétences ici, appuyez sur le boutton + afin de rajouter une compétence</h3>
@@ -55,7 +55,8 @@
 			</tr>
 		</table>
 	    <br>
-	    <button type="button" name="suivant" onclick="afficherFormulaireTrois()">Valider</button>
+	    <button type="button" name="precedent" onclick="afficherPrecedentUn()">Précédent</button>
+	    <button type="button" name="suivant" onclick="afficherFormulaireTrois()">Suivant</button>
 	</form>
 
 	<form id="form3" action="vous.php" method="post" style="display: none;">
@@ -67,7 +68,8 @@
 			</tr>
 		</table>
 		<br>
-		<button type="button" name="suivant" onclick="afficherFormulaireQuatre()">Valider</button>
+		<button type="button" name="precedent" onclick="afficherPrecedentDeux()">Précédent</button>
+		<button type="button" name="suivant" onclick="afficherFormulaireQuatre()">Suivant</button>
 	</form>
 
 	<form id="form4" action="vous.php" method="post" style="display: none;">
@@ -82,7 +84,8 @@
 			</tr>
 		</table>
 		<br>
-		<button type="button" name="suivant" onclick="afficherFormulaireCinq()">Valider</button>
+		<button type="button" name="precedent" onclick="afficherPrecedentTrois()">Précédent</button>
+		<button type="button" name="suivant" onclick="afficherFormulaireCinq()">Suivant</button>
 	</form>
 
 	<form id="form5" action="vous.php" method="post" style="display: none;">
@@ -94,7 +97,8 @@
 			</tr>
 		</table>
 		<br>
-		<button type="button" name="suivant" onclick="afficherFormulaireSix()">Valider</button>
+		<button type="button" name="precedent" onclick="afficherPrecedentQuatre()">Précédent</button>
+		<button type="button" name="suivant" onclick="afficherFormulaireSix()">Suivant</button>
 	</form>
 
 	<form id="form6" action="vous.php" method="post" style="display: none;">
@@ -106,7 +110,8 @@
 			</tr>
 		</table>
 		<br>
-		<button type="button" name="suivant" onclick="afficherFormulaireSept()">Valider</button>
+		<button type="button" name="precedent" onclick="afficherPrecedentCinq()">Précédent</button>
+		<button type="button" name="suivant" onclick="afficherFormulaireSept()">Suivant</button>
 	</form>
 
 	<form id="form7" action="vous.php" method="post" style="display: none;">
@@ -118,6 +123,7 @@
 			</tr>
 		</table>
 		<br>
+		<button type="button" name="precedent" onclick="afficherPrecedentSix()">Précédent</button>
 		<button type="submit" name="soumettre">Générer le CV</button>
 	</form>
 
