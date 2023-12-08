@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Projet WEB : partie "VOUS" pour générer un CV</title>
 	<script type="text/javascript" src="vous.js"></script>
+	<style type="text/css" src="vous.css"></style>
 </head>
 
 <body>
 	<h1>Décrivez-vous pour surprendre les autres !!</h1>
 
 	<form id="form1" action="vous.php" method="post">
+		<h3>Renseignez vos coordonnées ici</h3>
 		<table border="1">
 			<tr>
 				<td>Nom</td>
 				<td><input type="text" name="nom"></td>
 			</tr>
-			<tr>
+			<tr> 
 				<td>Prénom</td>
 				<td><input type="text" name="prenom"></td>
 			</tr>
@@ -36,96 +38,87 @@
 				<td>Adresse-mail</td>
 				<td><input type="text" name="mail"></td>
 			</tr>
-			<tr>
-				<td colspan="2" align="center">
-		    		<input type="button" name="suivant" value="Valider" onclick="afficherFormulaireDeux()">
-		    	</td>
-			</tr>
 		</table>
+		<br>
+	    <button type="button" name="suivant" onclick="afficherFormulaireDeux()">Valider</button>
 	</form><br>
 
 	<form id="form2" action="vous.php" method="post" style="display: none;">
-		<table border="1">
+		<h3>Veuillez énumérer vos compétences ici, appuyez sur le boutton + afin de rajouter une compétence</h3>
+		<table border="1" id="competencesTable">
 			<tr>
-				<td>Compétences</td>
-				<td><input type="text" name="competences"></td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center">
-		    		<input type="button" name="suivant" value="Valider" onclick="afficherFormulaireTrois()">
-		    	</td>
+				<td>Compétence 1</td>
+				<td><input type="text" name="competence"></td>
+				<td>
+					<button type="button" onclick="ajouterCompetence()">+</button>
+				</td>
 			</tr>
 		</table>
+	    <br>
+	    <button type="button" name="suivant" onclick="afficherFormulaireTrois()">Valider</button>
 	</form>
 
 	<form id="form3" action="vous.php" method="post" style="display: none;">
+		<h3>Veuillez nous décrire vos centres d'intérêt : </h3>
 		<table border="1">
 			<tr>
 				<td>Centres d'intérêt</td>
 				<td><input type="text" name="interet"></td>
 			</tr>
-			<tr>
-				<td colspan="2" align="center">
-		    		<input type="button" name="suivant" value="Valider" onclick="afficherFormulaireQuatre()">
-		    	</td>
-			</tr>
 		</table>
+		<br>
+		<button type="button" name="suivant" onclick="afficherFormulaireQuatre()">Valider</button>
 	</form>
 
 	<form id="form4" action="vous.php" method="post" style="display: none;">
-		<table border="1">
+		<h3>Veuillez nous indiquer quelles langues parlez-vous</h3>
+		<table border="1" id="languesTable">
 			<tr>
-				<td>Langues</td>
+				<td>Langue 1</td>
 				<td><input type="text" name="langues"></td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center">
-		    		<input type="button" name="suivant" value="Valider" onclick="afficherFormulaireCinq()">
-		    	</td>
+				<td>
+				<button type="button" onclick="ajouterLangues()">+</button>
+				</td>
 			</tr>
 		</table>
+		<br>
+		<button type="button" name="suivant" onclick="afficherFormulaireCinq()">Valider</button>
 	</form>
 
 	<form id="form5" action="vous.php" method="post" style="display: none;">
+		<h3>Veuillez décrire votre profil en quelques lignes</h3>
 		<table border="1">
 			<tr>
 				<td>Profil</td>
 				<td><input type="text" name=""></td>
 			</tr>
-			<tr>
-				<td colspan="2" align="center">
-		    		<input type="button" name="suivant" value="Valider" onclick="afficherFormulaireSix()">
-		    	</td>
-			</tr>
 		</table>
+		<br>
+		<button type="button" name="suivant" onclick="afficherFormulaireSix()">Valider</button>
 	</form>
 
 	<form id="form6" action="vous.php" method="post" style="display: none;">
+		<h3>Avez-vous eu de l'expérience ou bien réalisé des projets à l'école, veuillez les décrire ici</h3>
 		<table border="1">
 			<tr>
 				<td>Expérience</td>
 				<td><input type="text" name="experience"></td>
 			</tr>
-			<tr>
-				<td colspan="2" align="center">
-		    		<input type="button" name="suivant" value="Valider" onclick="afficherFormulaireSept()">
-		    	</td>
-			</tr>
 		</table>
+		<br>
+		<button type="button" name="suivant" onclick="afficherFormulaireSept()">Valider</button>
 	</form>
 
 	<form id="form7" action="vous.php" method="post" style="display: none;">
-		<table border="1">
+		<h3>Pour finir quelle formation avez-vous suivi au cours de votre parcours</h3>
+		<table border="1"> 
 			<tr>
 				<td>Formation</td>
 				<td><input type="text" name="formation"></td>
 			</tr>
-			<tr>
-				<td colspan="2" align="center">
-		    		<input type="submit" name="soumettre" value="Générer le CV">
-		    	</td>
-			</tr>
 		</table>
+		<br>
+		<button type="submit" name="soumettre">Générer le CV</button>
 	</form>
 
 	
