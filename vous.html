@@ -12,13 +12,23 @@
 
 	<form id="form1" action="vous.php" method="post">
 		<h3>Pour commncer, renseignez vos coordonnées :</h3>
-		<table border="1">
+		<table>
+			<tr>
+				<td>Photo</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="file" name="photo">
+				</td>
+			</tr>
+		</table>
+		<table>
 			<tr>
 				<td>Nom</td>
-				<td><input type="text" name="nom"></td>
+				<td>Prénom</td>
 			</tr>
 			<tr> 
-				<td>Prénom</td>
+				<td><input type="text" name="nom"></td>
 				<td><input type="text" name="prenom"></td>
 			</tr>
 			<tr>
@@ -31,10 +41,10 @@
 			</tr>
 			<tr>
 				<td>Téléphone</td>
-				<td><input type="text" name="telephone"></td>
+				<td>Adresse-mail</td>
 			</tr>
 			<tr>
-				<td>Adresse-mail</td>
+				<td><input type="text" name="telephone"></td>
 				<td><input type="text" name="mail"></td>
 			</tr>
 		</table>
@@ -44,7 +54,7 @@
 
 	<form id="form2" action="vous.php" method="post" style="display: none;">
 		<h3>Veuillez énumérer vos compétences ici, appuyez sur le boutton '+' afin de rajouter une compétence :</h3>
-		<table border="1" id="competencesTable">
+		<table id="competencesTable">
 			<tr>
 				<td>Compétence 1</td>
 				<td><input type="text" name="competence"></td>
@@ -60,7 +70,7 @@
 
 	<form id="form3" action="vous.php" method="post" style="display: none;">
 		<h3>Veuillez nous décrire vos centres d'intérêt : </h3>
-		<table border="1">
+		<table>
 			<tr>
 				<td>Centres d'intérêt</td>
 				<td><input type="text" name="interet"></td>
@@ -73,7 +83,7 @@
 
 	<form id="form4" action="vous.php" method="post" style="display: none;">
 		<h3>Veuillez nous indiquer vos compétences linguistiques :</h3>
-		<table border="1" id="languesTable">
+		<table id="languesTable">
 			<tr>
 				<td>Langue 1</td>
 				<td><input type="text" name="langues"></td>
@@ -89,7 +99,7 @@
 
 	<form id="form5" action="vous.php" method="post" style="display: none;">
 		<h3>Veuillez vous décrire en quelques lignes :</h3>
-		<table border="1">
+		<table>
 			<tr>
 				<td>Profil</td>
 				<td><input type="text" name="profil"></td>
@@ -102,7 +112,7 @@
 
 	<form id="form6" action="vous.php" method="post" style="display: none;">
 		<h3>Avez-vous eu de l'expérience ou bien réalisé des projets à l'école ? Veuillez les décrire ici :</h3>
-		<table border="1">
+		<table>
 			<tr>
 				<td>Expérience</td>
 				<td><input type="text" name="experience"></td>
@@ -115,7 +125,7 @@
 
 	<form id="form7" action="vous.php" method="post" style="display: none;">
 		<h3>Pour finir, quelles formations avez-vous suivi au cours de votre parcours :</h3>
-		<table border="1"> 
+		<table > 
 			<tr>
 				<td>Formation</td>
 				<td><input type="text" name="formation"></td>
