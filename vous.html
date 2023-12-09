@@ -4,136 +4,44 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Projet WEB : partie "VOUS" pour générer un CV</title>
-	<script type="text/javascript" src="vous.js"></script>
-	<style type="text/css" src="vous.css"></style>
+	
+	<link href="MiseEnPage.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript"src="vous.js"></script>
 </head>
 <body>
-	<h1>Décrivez-vous pour surprendre les autres !!</h1>
 
-	<form id="form1" action="vous.php" method="post">
-		<h3>Pour commncer, renseignez vos coordonnées :</h3>
-		<table>
-			<tr>
-				<td>Photo</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="file" name="photo">
-				</td>
-			</tr>
-		</table>
-		<table>
-			<tr>
-				<td>Nom</td>
-				<td>Prénom</td>
-			</tr>
-			<tr> 
-				<td><input type="text" name="nom"></td>
-				<td><input type="text" name="prenom"></td>
-			</tr>
-			<tr>
-				<td>Date de naissance</td>
-				<td><input type="Date" name="naissance"></td>
-			</tr>
-			<tr>
-				<td>Adresse</td>
-				<td><input type="text" name="adresse"></td>
-			</tr>
-			<tr>
-				<td>Téléphone</td>
-				<td>Adresse-mail</td>
-			</tr>
-			<tr>
-				<td><input type="text" name="telephone"></td>
-				<td><input type="text" name="mail"></td>
-			</tr>
-		</table>
-		<br>
-	    <button type="button" name="suivant" onclick="afficherFormulaireDeux()">Suivant</button>
-	</form>
+	<div id="nav1">
+		<img div="logo" id="logo" src="ece in logo final.png" alt="ECE logo" height="100" width="240"></img>
+		<div id="nav">
+			<a href="accueil.html"><img src="bouton accueil.png" alt="Accueil" id= "icone"></a>
+			<a href="mon reseau.html"><img src="bouton mon reseau.png" alt="Mon Reseau" id= "icone"></a>
+			<a href="vous.html"><img src="bouton vous.png" alt="Vous" id= "icone"></a>
+			<a href="notifications.html"><img src="bouton notifications.png" alt="Notifications" id= "icone"></a>
+			<a href="messagerie.html"><img src="bouton messagerie.png" alt="Messagerie" id= "icone"></a>
+			<a href="emplois.html"><img src="bouton emplois.png" alt="Emplois" id= "icone"></a>
+	</div>
+	<h2>Vous</h2>
 
-	<form id="form2" action="vous.php" method="post" style="display: none;">
-		<h3>Veuillez énumérer vos compétences ici, appuyez sur le boutton '+' afin de rajouter une compétence :</h3>
-		<table id="competencesTable">
-			<tr>
-				<td>Compétence 1</td>
-				<td><input type="text" name="competence"></td>
-				<td>
-					<button type="button" onclick="ajouterCompetence()">+</button>
-				</td>
-			</tr>
-		</table>
-	    <br>
-	    <button type="button" name="precedent" onclick="afficherPrecedentUn()">Précédent</button>
-	    <button type="button" name="suivant" onclick="afficherFormulaireTrois()">Suivant</button>
-	</form>
+	<div id="section">
+		<p>
+			Ici vous pourrez vous décrire afin d'impressionner les autres ! <br> Veuillez cliquer sur le bouton 'continuer' afin de pouvoir générer un maginifique CV.
+		</p>
 
-	<form id="form3" action="vous.php" method="post" style="display: none;">
-		<h3>Veuillez nous décrire vos centres d'intérêt : </h3>
-		<table>
-			<tr>
-				<td>Centres d'intérêt</td>
-				<td><input type="text" name="interet"></td>
-			</tr>
-		</table>
-		<br>
-		<button type="button" name="precedent" onclick="afficherPrecedentDeux()">Précédent</button>
-		<button type="button" name="suivant" onclick="afficherFormulaireQuatre()">Suivant</button>
-	</form>
+		<form action="vous2.html">
+            <button type="submit">Continuer</button>
+        </form>
 
-	<form id="form4" action="vous.php" method="post" style="display: none;">
-		<h3>Veuillez nous indiquer vos compétences linguistiques :</h3>
-		<table id="languesTable">
-			<tr>
-				<td>Langue 1</td>
-				<td><input type="text" name="langues"></td>
-				<td>
-				<button type="button" onclick="ajouterLangues()">+</button>
-				</td>
-			</tr>
-		</table>
-		<br>
-		<button type="button" name="precedent" onclick="afficherPrecedentTrois()">Précédent</button>
-		<button type="button" name="suivant" onclick="afficherFormulaireCinq()">Suivant</button>
-	</form>
+	</div>
 
-	<form id="form5" action="vous.php" method="post" style="display: none;">
-		<h3>Veuillez vous décrire en quelques lignes :</h3>
-		<table>
-			<tr>
-				<td>Profil</td>
-				<td><input type="text" name="profil"></td>
-			</tr>
-		</table>
-		<br>
-		<button type="button" name="precedent" onclick="afficherPrecedentQuatre()">Précédent</button>
-		<button type="button" name="suivant" onclick="afficherFormulaireSix()">Suivant</button>
-	</form>
-
-	<form id="form6" action="vous.php" method="post" style="display: none;">
-		<h3>Avez-vous eu de l'expérience ou bien réalisé des projets à l'école ? Veuillez les décrire ici :</h3>
-		<table>
-			<tr>
-				<td>Expérience</td>
-				<td><input type="text" name="experience"></td>
-			</tr>
-		</table>
-		<br>
-		<button type="button" name="precedent" onclick="afficherPrecedentCinq()">Précédent</button>
-		<button type="button" name="suivant" onclick="afficherFormulaireSept()">Suivant</button>
-	</form>
-
-	<form id="form7" action="vous.php" method="post" style="display: none;">
-		<h3>Pour finir, quelles formations avez-vous suivi au cours de votre parcours :</h3>
-		<table > 
-			<tr>
-				<td>Formation</td>
-				<td><input type="text" name="formation"></td>
-			</tr>
-		</table>
-		<br>
-		<button type="button" name="precedent" onclick="afficherPrecedentSix()">Précédent</button>
-		<button type="submit" name="soumettre">Générer le CV</button>
-	</form>	
+	<div id="footer">
+		<a href="Accueil.html">Accueil</a>
+ 		<a href="MonReseau.html">Mon Réseau</a>
+ 		<a href="Vous.html">Vous</a>
+ 		<a href="Notification.html">Notification</a>
+ 		<a href="Messagerie.html">Messagerie</a>
+ 		<a href="Emplois.html">Emplois</a><br>
+ 		Copyright &copy; 2023 ECE in Social media professionnel de l'ECE Paris<br>
+ 		<a href="mailto:ecein.paris@gmail.com">ecein.paris@gmail.com</a>
+	</div>
 </body>
 </html>
