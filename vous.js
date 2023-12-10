@@ -1,66 +1,3 @@
-//affichage quand on clique sur le bouton suivant 
-function afficherFormulaireDeux(){
-	// pour le 2e formulaire on fait "disparaitre" le premier 
-	document.getElementById("form1").style.display ="none"; 
-	document.getElementById("form2").style.display ="block"; 
-} 
-
-function afficherFormulaireTrois(){
-	document.getElementById("form2").style.display ="none"; 
-	document.getElementById("form3").style.display ="block"; 
-}
-		
-function afficherFormulaireQuatre(){
-	document.getElementById("form3").style.display ="none"; 
-	document.getElementById("form4").style.display ="block"; 
-}
-		
-function afficherFormulaireCinq(){
-	document.getElementById("form4").style.display ="none"; 
-	document.getElementById("form5").style.display ="block"; 
-}
-		
-function afficherFormulaireSix(){
-	document.getElementById("form5").style.display ="none"; 
-	document.getElementById("form6").style.display ="block"; 
-}
-
-function afficherFormulaireSept(){
-	document.getElementById("form6").style.display ="none"; 
-	document.getElementById("form7").style.display ="block"; 
-}	
-
-//affichage quand on appuie sur le bouton precedent 
-function afficherPrecedentUn(){
-	document.getElementById("form2").style.display ="none"; 
-	document.getElementById("form1").style.display ="block"; 
-}
-
-function afficherPrecedentDeux(){
-	document.getElementById("form3").style.display ="none"; 
-	document.getElementById("form2").style.display ="block"; 
-}
-
-function afficherPrecedentTrois(){
-	document.getElementById("form4").style.display ="none"; 
-	document.getElementById("form3").style.display ="block"; 
-}
-
-function afficherPrecedentQuatre(){
-	document.getElementById("form5").style.display ="none"; 
-	document.getElementById("form4").style.display ="block"; 
-}
-
-function afficherPrecedentCinq(){
-	document.getElementById("form6").style.display ="none"; 
-	document.getElementById("form5").style.display ="block"; 
-}
-
-function afficherPrecedentSix(){
-	document.getElementById("form7").style.display ="none"; 
-	document.getElementById("form6").style.display ="block"; 
-}
-
 //fonction permettant d'ajouter des lignes 
 function ajouterCompetence() {
     var table = document.getElementById("competencesTable");
@@ -80,6 +17,26 @@ function ajouterLangues(){
     var cell2 = newRow.insertCell(1);
     cell1.innerHTML = "Langue" + ' ' + numeroLangue;
     cell2.innerHTML = '<input type="text" name="langue[]">';
+}
+
+function ajouterExperience(){
+    var table = document.getElementById("experienceTable");
+    var numeroExperience = table.rows.length + 1; 
+    var newRow = table.insertRow(table.rows.length);
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+    cell1.innerHTML = "Experience/projet" + ' ' + numeroExperience;
+    cell2.innerHTML = '<input type="text" name="experience[]">';
+}
+
+function ajouterFormation(){
+    var table = document.getElementById("formationsTable");
+    var numeroFormation = table.rows.length + 1; 
+    var newRow = table.insertRow(table.rows.length);
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+    cell1.innerHTML = "Formation" + ' ' + numeroFormation;
+    cell2.innerHTML = '<input type="text" name="formation[]">';
 }
 
 //fonction permettant de charger le fichier XML 
