@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Page pour remplir les infos afin de générer le CV</title>
+	<link href="vous.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript"src="vous.js"></script>
+</head>
+<body>
+
+	<div id="nav1">
+		<a href="vous.html" style="margin-left:10px"><button class="button">Retourner sur Vous</button></a><br>
+		<h2>Générer votre CV de rêve</h2><br>
+		<form id="form1" action="vous.php" method="post">
+			<table>
+				<h3>Vos coordonnées :</h3>
+				<tr>
+					<td>Photo</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="file" name="photo">
+					</td>
+				</tr>
+			</table><br>
+			<table>
+				<tr>
+					<td>Nom</td>
+					<td>Prénom</td>
+				</tr>
+				<tr> 
+					<td><input type="text" name="nom"></td>
+					<td><input type="text" name="prenom"></td>
+				</tr>
+			</table><br> 
+			<table>
+				<tr>
+					<td>Date de naissance</td>
+					<td><input type="Date" name="naissance"></td>
+				</tr>
+			</table><br>
+			<table>	
+				<tr>
+					<td>Adresse</td>
+					<td><input type="text" name="adresse"></td>
+				</tr>
+			</table><br>
+			<table>		
+				<tr>
+					<td>Téléphone</td>
+					<td>Adresse-mail</td>
+				</tr>
+				<tr>
+					<td><input type="text" name="telephone"></td>
+					<td><input type="text" name="mail"></td>
+				</tr>
+			</table>
+		</form><br>
+
+		<form id="form5" action="vous.php" method="post">
+			<h3>Veuillez vous décrire en quelques lignes :</h3>
+			<table>
+				<tr>
+					<td>Profil</td>
+					<td><input type="text" name="profil"></td>
+				</tr>
+			</table>
+		</form><br>
+
+		<form id="form2" action="vous.php" method="post">
+			<table id="competencesTable">
+				<h3>Vos compétences :</h3>
+				<tr>
+					<td>Compétence 1</td>
+					<td><input type="text" name="competence"></td>
+					<td>
+						<button type="button" onclick="ajouterCompetence()">+</button>
+					</td>
+				</tr>
+			</table>
+		</form><br>
+		<form id="form3" action="vous.php" method="post">
+			<table>
+				<h3>Vos centres d'intérêt :</h3>
+				<tr>
+					<td>Centres d'intérêt</td>
+					<td><input type="text" name="interet"></td>
+				</tr>
+			</table>
+		</form><br>
+		<form id="form4" action="vous.php" method="post">
+			<h3>Vos compétences linguistiques :</h3>
+			<table id="languesTable">
+				<tr>
+					<td>Langue 1</td>
+					<td><input type="text" name="langues"></td>
+					<td>
+					<button type="button" onclick="ajouterLangues()">+</button>
+					</td>
+				</tr>
+			</table>
+		</form><br>
+
+		<form id="form6" action="vous.php" method="post">
+			<h3>Expérience, projets :</h3>
+			<table id="experienceTable">
+				<tr>
+					<td>Expérience/projet 1</td>
+					<td><input type="text" name="experience"></td>
+					<td>
+					<button type="button" onclick="ajouterExperience()">+</button>
+					</td>
+				</tr>
+			</table>
+		</form><br>
+
+		<form id="form7" action="vous.php" method="post">
+			<h3>Formations :</h3>
+			<table id="formationsTable"> 
+				<tr>
+					<td>Formation 1</td>
+					<td><input type="text" name="formation"></td>
+					<td>
+					<button type="button" onclick="ajouterFormation()">+</button>
+					</td>
+				</tr>
+			</table><br><br><br>
+			<button class="button" style="margin-left: 62%;">Générer le CV</button>
+		</form><br>
+	</div>
+	<footer id="fin">
+ 		Copyright &copy; 2023 ECE in Social media professionnel de l'ECE Paris<br>
+ 		<a href="mailto:ecein.paris@gmail.com">ecein.paris@gmail.com</a>
+ 	</footer>
+	
+</body>
+</html>
