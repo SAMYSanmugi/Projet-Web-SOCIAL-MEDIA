@@ -9,7 +9,6 @@ h3 {
 	margin-left: 32%;
 }
 #nav1{
-	filter: drop-shadow(black 0rem 0.5rem 9px);
 	padding-top: 10px;
 	padding-bottom: 20px;
 	margin-bottom: 40px;
@@ -17,7 +16,6 @@ h3 {
 
 }
 #section{
-	filter: drop-shadow(black 0rem 0.5rem 9px);
 	height: 500px;
 	width: 650px;
 	text-align: center;
@@ -34,7 +32,7 @@ h3 {
 
 .button{
 	padding: 15px 25px;
-  font-size: 16px;
+  	font-size: 16px;
 	cursor: pointer;
 	text-align: center;
 	border-radius: 15px;
