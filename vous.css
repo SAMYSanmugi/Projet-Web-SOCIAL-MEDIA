@@ -9,6 +9,7 @@ h3 {
 	margin-left: 32%;
 }
 #nav1{
+	filter: drop-shadow(black 0rem 0.5rem 9px);
 	padding-top: 10px;
 	padding-bottom: 20px;
 	margin-bottom: 40px;
