@@ -4,27 +4,33 @@ table {
 }
 h2 {
 	margin-left: 5%;
-}
+} 
 h3 {
 	margin-left: 32%;
 }
 #nav1{
-	filter: drop-shadow(black 0rem 0.5rem 9px);
 	padding-top: 10px;
 	padding-bottom: 20px;
 	margin-bottom: 40px;
 	background:linear-gradient(127deg, rgba(0, 255, 255, 0.5), rgba(255, 255, 0, 0.5) 80.71%);
+
+}
+#nav1{
+	filter: drop-shadow(black 0rem 0.5rem 9px);
+	background:url('fond12_cv.png');
+	padding-bottom: 300px auto;
+	margin-bottom: 40px;
 }
 #section{
-	filter: drop-shadow(black 0rem 0.5rem 9px);
 	height: 500px;
-	width: 650px;
+	width: 750px;
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 20px;
 	margin-bottom: 40px;
 	background:linear-gradient(127deg, rgba(0, 255, 255, 0.5), rgba(255, 255, 0, 0.5) 80.71%);
 
+	
 }
 #fin{
 	text-align: center;
