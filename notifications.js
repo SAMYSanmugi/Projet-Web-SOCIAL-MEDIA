@@ -9,7 +9,7 @@ $(document).ready(function(){
 		$($prevE).css("background-color","white");
 		$prevD = ".detail1";
 		$prevE = ".notifications1";
-		$(this).css("background-color","gold");
+		$(this).css("background-color","lightblue");
 		$('.detail1').show();
 	});
 	$('.notifications2').click(function(){
@@ -17,7 +17,7 @@ $(document).ready(function(){
 		$($prevE).css("background-color","white");
 		$prevD = ".detail2";
 		$prevE = ".notifications2";
-		$(this).css("background-color","gold");
+		$(this).css("background-color","lightblue");
 		$('.detail2').show();
 	});
 	$('.notifications3').click(function(){
@@ -25,7 +25,7 @@ $(document).ready(function(){
 		$($prevE).css("background-color","white");
 		$prevD = ".detail3";
 		$prevE = ".notifications3";
-		$(this).css("background-color","gold");
+		$(this).css("background-color","lightblue");
 		$('.detail3').show();
 	});
 	
