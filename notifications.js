@@ -12,14 +12,6 @@ $(document).ready(function(){
 		$(this).css("background-color","lightblue");
 		$('.detail1').show();
 	});
-	$('.notifications2').click(function(){
-		$($prevD).hide();
-		$($prevE).css("background-color","white");
-		$prevD = ".detail2";
-		$prevE = ".notifications2";
-		$(this).css("background-color","lightblue");
-		$('.detail2').show();
-	});
 	$('.notifications3').click(function(){
 		$($prevD).hide();
 		$($prevE).css("background-color","white");
