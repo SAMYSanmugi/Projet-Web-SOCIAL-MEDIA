@@ -1,54 +1,143 @@
 <!DOCTYPE html>
-<html> 
+<html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Projet WEB : partie "VOUS" pour générer un CV</title>	
-	<link href="vous.css" rel="stylesheet" type="text/css"/>
-	<link href="MiseEnPage.css" rel="stylesheet" type="text/css"/>
+	<title>Page pour remplir les infos afin de générer le CV</title>
+	<link href="vous2.css" rel="stylesheet" type="text/css"/>
 	<script type="text/javascript"src="vous.js"></script>
 	<link rel="shortcut_icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
 	<div id="nav1">
-		<img div="logo" id="logo" src="ece in logo final.png" alt="ECE logo" height="100" width="240"></img>
-		<div id="nav">
-			<a href="accueil.html"><img src="bouton accueil.png" alt="Accueil" id= "icone"></a>
-			<a href="mon reseau.html"><img src="bouton mon reseau.png" alt="Mon Reseau" id= "icone"></a>
-			<a href="vous.html"><img src="bouton vous.png" alt="Vous" id= "icone"></a>
-			<a href="notifications.html"><img src="bouton notifications.png" alt="Notifications" id= "icone"></a>
-			<a href="messagerie.html"><img src="bouton messagerie.png" alt="Messagerie" id= "icone"></a>
-			<a href="emplois.html"><img src="bouton emplois.png" alt="Emplois" id= "icone"></a>
-		</div>
-		<h2>Vous</h2>
+		<a href="vous.html" style="margin-left:10px"><button class="button">Retourner sur Vous</button></a><br>
+		<h2>Générer votre CV de rêve</h2><br>
+
+		<form id="form1" action="vous.php" method="post">
+			<h3>Vos coordonnées :</h3>
+			<table>
+				<tr>
+					<td>Photo</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="file" name="photo">
+					</td>
+				</tr>
+			</table><br>
+			<table>
+				<tr>
+					<td>Nom</td>
+					<td>Prénom</td>
+				</tr>
+				<tr> 
+					<td><input type="text" name="nom"></td>
+					<td><input type="text" name="prenom"></td>
+				</tr>
+			</table><br> 
+			<table>
+				<tr>
+					<td>Date de naissance</td>
+					<td><input type="Date" name="naissance"></td>
+				</tr>
+			</table><br>
+			<table>	
+				<tr>
+					<td>Adresse</td>
+					<td><input type="text" name="adresse"></td>
+				</tr>
+			</table><br>
+			<table>		
+				<tr>
+					<td>Téléphone</td>
+					<td>Adresse-mail</td>
+				</tr>
+				<tr>
+					<td><input type="text" name="telephone"></td>
+					<td><input type="text" name="mail"></td>
+				</tr>
+			</table>
+			<br>
+
+			<h3>Veuillez vous décrire en quelques lignes :</h3>
+			<table>
+				<tr>
+					<td>Profil</td>
+					<td><input type="text" name="profil"></td>
+				</tr>
+			</table>
+			<br>
+
+			<h3>Vos compétences :</h3>
+			<table id="competencesTable">
+				<tr>
+					<td>Compétence 1</td>
+					<td><input type="text" name="competence"></td>
+					<td>
+						<button type="button" onclick="ajouterCompetence()">+</button>
+					</td>
+				</tr>
+			</table>
+			<br>
+
+			<h3>Vos centres d'intérêt :</h3>
+			<table>
+				<tr>
+					<td>Centres d'intérêt</td>
+					<td><input type="text" name="interet"></td>
+				</tr>
+			</table>
+			<br>
+
+			<h3>Vos compétences linguistiques :</h3>
+			<table id="languesTable">
+				<tr>
+					<td>Langue 1</td>
+					<td><input type="text" name="langues"></td>
+					<td>
+					<button type="button" onclick="ajouterLangues()">+</button>
+					</td>
+				</tr>
+			</table>
+			<br>
+
+			<h3>Expérience, projets :</h3>
+			<table id="experienceTable">
+				<tr>
+					<td>Expérience/projet 1</td>
+					<td><input type="text" name="experience"></td>
+					<td>
+					<button type="button" onclick="ajouterExperience()">+</button>
+					</td>
+				</tr>
+			</table>
+			<br>
+
+			<h3>Formations :</h3>
+			<table id="formationsTable"> 
+				<tr>
+					<td>Formation 1</td>
+					<td><input type="text" name="formation"></td>
+					<td>
+					<button type="button" onclick="ajouterFormation()">+</button>
+					</td>
+				</tr>
+			</table><br><br><br>
+
+			<button class="button" style="margin-left: 62%;">Générer le CV</button>
+		</form>
 	</div>
+
+	<footer id="fin"><a href="Accueil.html">Accueil</a>
+ 		<a href="MonReseau.html">Mon Réseau</a>
+ 		<a href="Vous.html">Vous</a>
+ 		<a href="Notifications.html">Notifications</a>
+ 		<a href="Messagerie.html">Messagerie</a>
+ 		<a href="Emplois.html">Emplois</a><br>
+ 		Copyright &copy; 2023 ECE in Social media professionnel de l'ECE Paris<br>
+ 		<a href="mailto:ecein.paris@gmail.com">ecein.paris@gmail.com</a>
+ 	</footer>
 	
-
-	<div id="section" style="margin-left: 28%;">
-		<p>
-			Explorez cette section dédiée à la création de CV magnifiques, conçus pour vous aider à décrocher le travail de vos rêves.<br>
-		</p>
-		<p>
-			Laissez-vous guider vers une carrière exceptionnelle en élaborant un curriculum vitae qui fera briller vos compétences et attirera l'attention des employeurs. Transformez votre avenir professionnel avec des CV qui vous démarqueront sur le marché du travail. <br>		
-		</p><br><br><br>
-		<p>
-			Cliquez ci-dessous pour amorcer la création de votre CV exceptionnel. Décrochez le job de vos rêves en quelques étapes simples. Votre avenir professionnel commence ici, appuyez maintenant!
-		</p><br><br><br><br><br><br><br>
- 
-		<a href="vous2.html" style="margin-left: 62%;"><button class="button">Continuer</button></a><br><br>
-	</div>
-
-
-	<footer id="fin">
-		<a href="Accueil.html">Accueil</a>
-	 	<a href="MonReseau.html">Mon Réseau</a>
-	 	<a href="Vous.html">Vous</a>
-	 	<a href="Notifications.html">Notifications</a>
-	 	<a href="Messagerie.html">Messagerie</a>
-	 	<a href="Emplois.html">Emplois</a><br>
-	 	Copyright &copy; 2023 ECE in Social media professionnel de l'ECE Paris<br>
-	 	<a href="mailto:ecein.paris@gmail.com">ecein.paris@gmail.com</a>
-	</footer>
 </body>
 </html>
