@@ -97,24 +97,86 @@
     </div>
     <div id="section">
 			<div id="photos">
-				<img src="Channelcroisière3.jpg" alt=" Look 9 of Channel collecction Croisière 2023/24 "height="100" width="120"><br><p>Look 9 of Chanel collection Croisière 2023/24</p><br>
+				<div class="photo-container">	
+					<img src="Channelcroisière3.jpg" alt=" Look 9 of Channel collecction Croisière 2023/24 "height="100" width="120"><br><p>Look 9 of Chanel collection Croisière 2023/24</p><br>
+					<button class="like-btn" onclick="toggleLike(1)"><span id="like-text-1">Like</span>
+	                	<span class="like-emoji" id="like-emoji-1">❤️</span></button>
+	                <button class="share-btn" onclick="sharePhoto(1)">Share</button>
+	            </div>    
+	            <div class="photo-container">    
 
-	            <img src="Channelcroisière2.jpg" alt="Photo 2"height="100" width="120">
-	            <br><p>Look 9 of Chanel collection Croisière 2023/24</p><br>
+		            <img src="Channelcroisière2.jpg" alt="Photo 2"height="100" width="120">
+		            <br><p>Look 9 of Chanel collection Croisière 2023/24</p><br>
+		            <button class="like-btn" onclick="toggleLike(2)"><span id="like-text-2">Like</span>
+	                	<span class="like-emoji" id="like-emoji-2">❤️</span></button>
+	                <button class="share-btn" onclick="sharePhoto(2)">Share</button>
+	            </div>    
 
-	            <img src="Channelcroisière1.jpg" alt="Photo 3"height="100" width="120">
-	            <br><p>Look 9 of Chanel collection Croisière 2023/24</p><br>
+	            <div class="photo-container">
 
-	            <img src="ParisPhoto.jpg" alt="Photo 4"height="100" width="120">
-	            <br><p>Respirer Paris, cela conserve l'âme</p><br>
+		            <img src="Channelcroisière1.jpg" alt="Photo 3"height="100" width="120">
+		            <br><p>Look 9 of Chanel collection Croisière 2023/24</p><br>
+		            <button class="like-btn" onclick="toggleLike(3)"><span id="like-text-3">Like</span>
+	                	<span class="like-emoji" id="like-emoji-3">❤️</span></button>
+	                <button class="share-btn" onclick="sharePhoto(3)">Share</button>
+	            </div>    
 
-	            <img src="ChanelPhoto.jpg" alt="Photo 5"height="100" width="120">
-	            <br><p>Chanel fait son numéro au Grand Palais Éphémère, jusqu’au 9 janvier 2023</p><br>
+	            <div class="photo-container">    
+
+		            <img src="ParisPhoto.jpg" alt="Photo 4"height="100" width="120">
+		            <br><p>Respirer Paris, cela conserve l'âme</p><br>
+		            <button class="like-btn" onclick="toggleLike(4)"><span id="like-text-4">Like</span>
+	                	<span class="like-emoji" id="like-emoji-4">❤️</span></button>
+	                <button class="share-btn" onclick="sharePhoto(4)">Share</button>
+	            </div>
+
+	            <div class="photo-container">
+
+		            <img src="ChanelPhoto.jpg" alt="Photo 5"height="100" width="120">
+		            <br><p>Chanel fait son numéro au Grand Palais Éphémère, jusqu’au 9 janvier 2023</p><br>
+		            <button class="like-btn" onclick="toggleLike(5)"><span id="like-text-5">Like</span>
+	                	<span class="like-emoji" id="like-emoji-5">❤️</span></button>
+	                <button class="share-btn" onclick="sharePhoto(5)">Share</button>
+	            </div>
 
 
-	        </div>
+		    </div>
 	        
-	</div>       
+	</div>     
+	<script>
+	 	 function toggleLike(photoId) {
+            var likeBtn = document.getElementById("like-text-" + photoId);
+            var likeEmoji = document.getElementById("like-emoji-" + photoId);
+
+            if (likeBtn.innerText === "Like") {
+                
+                console.log("Liked photo " + photoId);
+                likeBtn.innerText = "Unlike";
+                likeEmoji.style.display = "inline";
+            } else {
+                
+                console.log("Unliked photo " + photoId);
+                likeBtn.innerText = "Like";
+                likeEmoji.style.display = "none";
+            }
+        }
+        
+
+        function sharePhoto(photoId) {
+            
+            console.log("Shared photo " + photoId);
+
+            
+            var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=URL_DE_VOTRE_IMAGE";
+            
+            window.open(facebookUrl, "_blank");
+
+            
+            var whatsappUrl = "https://api.whatsapp.com/send?text=Check out this photo: URL_DE_VOTRE_IMAGE";
+            
+            window.open(whatsappUrl, "_blank");
+        }
+    </script>    
 
 </body>
 </html>
