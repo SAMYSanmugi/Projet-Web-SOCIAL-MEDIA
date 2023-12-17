@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Zhenyu</title>
+	<link href="Zhenyu.css" rel="stylesheet" type="text/css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#Salma").click(function(){
+				window.location.href = "Salma.html";
+			});	
+		});	
+
+		function toggleSubscription1() {
+	    var btn = document.getElementById("subscribeButton1");
+	    btn.disabled = true;
+
+	    // Simule l'envoi d'une requête au serveur pour s'abonner ou se désabonner
+	    setTimeout(function() {
+	        btn.textContent = btn.textContent === "S'abonner" ? "Se désabonner" : "S'abonner";
+	        btn.disabled = false;
+	    }, 300); // temps d'attente avant de réactiver le bouton (en millisecondes)
+    }
+		function toggleSubscription2() {
+	    var btn = document.getElementById("subscribeButton2");
+	    btn.disabled = true;
+
+	    // Simule l'envoi d'une requête au serveur pour s'abonner ou se désabo
+	    setTimeout(function() {
+	        btn.textContent = btn.textContent === "Ajouter" ? "Retirer" : "Ajouter";
+	        btn.disabled = false;
+	    }, 300); // temps d'attente avant de réactiver le bouton (en millisecondes)
+	}
+	function toggleSubscription3() {
+	    var btn = document.getElementById("subscribeButton3");
+	    btn.disabled = true;
+
+	    // Simule l'envoi d'une requête au serveur pour s'abonner ou se désabo
+	    setTimeout(function() {
+	        btn.textContent = btn.textContent === "Ajouter" ? "Retirer" : "Ajouter";
+	        btn.disabled = false;
+	    }, 300); // temps d'attente avant de réactiver le bouton (en millisecondes)
+	}
+</script>
+
+
+</head>
+<body>
+	<div id="header">
+		
+	</div>
+	<div id="nav">
+		<img id ="Zhenyu" src="ZhenyuPhoto.png"class="rounded-image" alt="Zhenyu Hu" height="130" width="80">
+		<div style="display: flex; justify-content: space-between; width: 100%;">
+			<button id="subscribeButton1" class="btn" onclick="toggleSubscription1()">S'abonner</button>
+			<button class="btn"><a href="Messagerie.html">Contacter</a></button>
+		</div>	
+
+
+		<p>Zhenyu HU <br> Paris, France <br> 06 03 76 29 47 </p>
+
+		<div id="logo">
+			<img  src="LogoZhenyu.png" class="rounded-image" height="50" width="50">
+			<p>Développeur de jeu de vidéo chez Google</p>
+			
+		</div>
+		<div id="logo">
+			<img  src="LogoEceJP.jpg"class="rounded-image"  height="50" width="50">
+			<p> Diplômée de l'ECE </p>
+		</div>
+		
+			<p> Les amis de Zhenyu Hu</p>
+			
+			<img id ="Salma" src="SalmaPhoto.png"class="rounded-image" alt="Salma Rezouki" height="50" width="40">
+			<p>Salma Rezouki</p>
+			<div style="display: flex; justify-content: space-between; width: 100%;">
+			<button id="subscribeButton2" class="btn" onclick="toggleSubscription2()">Ajouter</button>
+		    </div>
+	      
+    </div>
+    <div id="section">
+			<div id="photos">
+
+				<div class="photo-container">
+                <img src="PhotoZhenyu.webp" alt="Photo 1" height="100" width="120"><br>
+                <p>La meilleure activité à faire après les cours </p>
+                <button class="like-btn" onclick="toggleLike(1)"><span id="like-text-1">Like</span>
+                	<span class="like-emoji" id="like-emoji-1">❤️</span></button>
+                <button class="share-btn" onclick="sharePhoto(1)">Share</button>
+            </div>
+
+            <div class="photo-container">
+                <img src="PhotoChine.jpg" alt="Photo 2" height="100" width="120"><br>
+                <p>LA GRANDE MURAILLE DE CHINE</p>
+                <button class="like-btn" onclick="toggleLike(2)"><span id="like-text-2">Like</span>
+                	<span class="like-emoji" id="like-emoji-2">❤️</span></button>
+                <button class="share-btn" onclick="sharePhoto(2)">Share</button>
+            </div>
+
+            <div class="photo-container">
+                <img src="PhotoZhenyu1.jpg" alt="Photo 3" height="100" width="120"><br>
+                <p>L'avènement de l'esport au sein de l'industrie du jeu vidéo </p>
+                <button class="like-btn" onclick="toggleLike(3)"><span id="like-text-3">Like</span>
+                	<span class="like-emoji" id="like-emoji-3">❤️</span></button>
+                <button class="share-btn" onclick="sharePhoto(3)">Share</button>
+            </div>
+
+            
+
+
+
+	        </div>
+	        
+	</div>     
+	 <script>
+	 	 function toggleLike(photoId) {
+            var likeBtn = document.getElementById("like-text-" + photoId);
+            var likeEmoji = document.getElementById("like-emoji-" + photoId);
+
+            if (likeBtn.innerText === "Like") {
+                
+                console.log("Liked photo " + photoId);
+                likeBtn.innerText = "Unlike";
+                likeEmoji.style.display = "inline";
+            } else {
+                
+                console.log("Unliked photo " + photoId);
+                likeBtn.innerText = "Like";
+                likeEmoji.style.display = "none";
+            }
+        }
+        
+
+        function sharePhoto(photoId) {
+            
+            console.log("Shared photo " + photoId);
+
+            
+            var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=URL_DE_VOTRE_IMAGE";
+            
+            window.open(facebookUrl, "_blank");
+
+            
+            var whatsappUrl = "https://api.whatsapp.com/send?text=Check out this photo: URL_DE_VOTRE_IMAGE";
+            
+            window.open(whatsappUrl, "_blank");
+        }
+    </script>  
+
+</body>
+</html>

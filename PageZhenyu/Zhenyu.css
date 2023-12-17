@@ -1,0 +1,83 @@
+#header{
+    color : skyblue;
+    background:url('FondZhenyu.jpg');
+    /*background-color: rgba(255, 255, 255, 0.5);*/ 
+    line-height: 30px;
+    text-align : center;
+    padding : 100px;
+}
+#nav{
+            
+    background-color:#FFA586;
+    height: 850px;
+    width: 200px;
+    float: left;
+    padding: 50px;
+    border: 1px solid black;
+
+}
+#section{
+    text-color:black;
+    width:auto;
+    float:left;
+    background:#FFA586 ;
+    height: 950px;
+    width: 899px;
+    /*border: solid black;*/
+    /*padding: 267px;*/
+
+}
+
+
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+
+.btn{
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: black;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: whitesmoke;
+}
+.btn:active {
+    background-color: #ff69b4; 
+    color: white; 
+}
+.btn:disabled {
+    background-color: grey;
+    color: white;
+}
+.rounded-image {
+    border-radius: 50%;
+    align-items: center;
+}
+#photos {
+    padding-left: 20px;
+    padding-top: 20px;
+    display: inline-block;
+            text-align: left;
+}
+
+
+.photo-container {
+    margin-bottom: 20px;
+}
+
+.like-btn, .share-btn {
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 10px;
+}
+.like-emoji {
+ display: none;
+}
