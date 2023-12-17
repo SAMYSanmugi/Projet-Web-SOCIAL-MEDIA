@@ -67,4 +67,21 @@
 #photos {
     padding-left: 20px;
     padding-top: 20px;
+    display: inline-block;
+    text-align: left;
 }
+
+
+.photo-container {
+    margin-bottom: 20px;
+}
+
+.like-btn, .share-btn {
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 10px;
+}
+.like-emoji {
+ display: none;
+}
+
