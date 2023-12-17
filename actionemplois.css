@@ -1,0 +1,38 @@
+h1 {
+	width: 650px;
+	margin: auto;
+	text-align: center;
+	color: Black;
+	padding: 20px;
+	margin: 0 auto 20px auto;
+	border-radius: 5px;
+}
+h2 {
+	width: 650px;
+	margin: auto;
+	text-align: center;
+	color: white;
+	background-color: black;
+	padding: 20px;
+	margin: 0 auto 20px auto;
+	border-radius: 5px;
+}
+p {
+	margin-left: 22%;
+}
+table {
+	width: 680px;
+	margin: auto;
+}
+th {
+	background-color: linear-gradient(127deg, rgba(0, 255, 255, 0.5), rgba(255, 255, 0, 0.5) 80.71%);
+}
+td {
+	background-color: #cccccc;
+}
+td input {
+	width: 98%
+}
+tr:hover {
+	opacity: 0.8;
+}
