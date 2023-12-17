@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Salma</title>
+	<link href="Salma.css" rel="stylesheet" type="text/css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#Hina").click(function(){
+				window.location.href = "Hina.html";
+			});	
+			$("#Sanmugi").click(function(){
+				window.location.href = "Sanmugi.html";
+			});	
+			$("#Zhenyu").click(function(){
+				window.location.href = "Zhenyu.html";
+			});	
+
+		});	
+
+		function toggleSubscription1() {
+	    var btn = document.getElementById("subscribeButton1");
+	    btn.disabled = true;
+
+	    // Simule l'envoi d'une requête au serveur pour s'abonner ou se désabonner
+	    setTimeout(function() {
+	        btn.textContent = btn.textContent === "S'abonner" ? "Se désabonner" : "S'abonner";
+	        btn.disabled = false;
+	    }, 300); // temps d'attente avant de réactiver le bouton (en millisecondes)
+    }
+		function toggleSubscription2() {
+	    var btn = document.getElementById("subscribeButton2");
+	    btn.disabled = true;
+
+	    // Simule l'envoi d'une requête au serveur pour s'abonner ou se désabo
+	    setTimeout(function() {
+	        btn.textContent = btn.textContent === "Ajouter" ? "Retirer" : "Ajouter";
+	        btn.disabled = false;
+	    }, 300); // temps d'attente avant de réactiver le bouton (en millisecondes)
+	}
+	function toggleSubscription3() {
+	    var btn = document.getElementById("subscribeButton3");
+	    
+
+	    btn.disabled = true;
+
+	    // Simule l'envoi d'une requête au serveur pour s'abonner ou se désabo
+	    setTimeout(function() {
+	        btn.textContent = btn.textContent === "Ajouter" ? "Retirer" : "Ajouter";
+	        btn.disabled = false;
+	    }, 300); // temps d'attente avant de réactiver le bouton (en millisecondes)
+	}
+	function toggleSubscription4() {
+	    var btn = document.getElementById("subscribeButton4");
+	    
+
+	    btn.disabled = true;
+
+	    // Simule l'envoi d'une requête au serveur pour s'abonner ou se désabo
+	    setTimeout(function() {
+	        btn.textContent = btn.textContent === "Ajouter" ? "Retirer" : "Ajouter";
+	        btn.disabled = false;
+	    }, 300); // temps d'attente avant de réactiver le bouton (en millisecondes)
+	}
+	
+	
+</script>
+
+
+</head>
+<body>
+	<div id="header">
+		
+	</div>
+	<div id="nav">
+		<img id ="Salma" src="SalmaPhoto.png"class="rounded-image" alt="Salma Rezouki" height="130" width="80">
+		<div style="display: flex; justify-content: space-between; width: 100%;">
+			<button id="subscribeButton1" class="btn" onclick="toggleSubscription1()">S'abonner</button>
+			<button class="btn"><a href="Messagerie.html">Contacter</a></button>
+		</div>	
+
+
+		<p>Salma Rezouki <br> Marseille, France <br> 06 77 21 56 52 </p>
+
+		<div id="logo">
+			<img  src="Logosa2.webp" class="rounded-image" height="50" width="50">
+			<p>Ambassadrice de l'Environnement Marin:</p>
+			
+		</div>
+		<div id="logo">
+			<img  src="Logosa1.jpg"class="rounded-image"  height="50" width="50">
+			<p> Diplômée de PADI (Professional Association of Diving Instructors) </p>
+		</div>
+		
+			<p> Les amis de Salma Rezouki:</p>
+			
+			<img id ="Hina" src="HinaPhoto.jpg"class="rounded-image" alt="Manolo Hina" height="50" width="40">
+			<p>Manolo Hina</p>
+			<div style="display: flex; justify-content: space-between; width: 100%;">
+			<button id="subscribeButton2" class="btn" onclick="toggleSubscription2()">Ajouter</button>
+		    </div>
+
+		    <img id ="Sanmugi" src="SanmugiPhoto.jpg"class="rounded-image" alt="Sanmugi Samy" height="50" width="40">
+			<p>Sanmugy Samy</p>
+			<div style="display: flex; justify-content: space-between; width: 100%;">
+			<button id="subscribeButton3" class="btn" onclick="toggleSubscription3()">Ajouter</button>
+		    </div>
+
+		    <img id ="Zhenyu" src="ZhenyuPhoto.png"class="rounded-image" alt="Zhenyu Hu" height="50" width="40">
+			<p>Zhenyu Hu</p>
+			<div style="display: flex; justify-content: space-between; width: 100%;">
+			<button id="subscribeButton4" class="btn" onclick="toggleSubscription4()">Ajouter</button>
+		    </div>
+
+	      
+    </div>
+    <div id="section">
+			<div id="photos">
+
+				<div class="photo-container">
+                <img src="PhotoSalma1.jpg" alt="Photo 1" height="100" width="120"><br>
+                <p>The best way to observe a fish is to become a fish </p>
+                <button class="like-btn" onclick="toggleLike(1)"><span id="like-text-1">Like</span>
+                	<span class="like-emoji" id="like-emoji-1">❤️</span></button>
+                <button class="share-btn" onclick="sharePhoto(1)">Share</button>
+            </div>
+
+            <div class="photo-container">
+                <img src="PhotoSalma2.jpeg" alt="Photo 2" height="100" width="120"><br>
+                <p>C'est la possibilité de résaliser un rêve qui rend la vie intéressante</p>
+                <button class="like-btn" onclick="toggleLike(2)"><span id="like-text-2">Like</span>
+                	<span class="like-emoji" id="like-emoji-2">❤️</span></button>
+                <button class="share-btn" onclick="sharePhoto(2)">Share</button>
+            </div>
+
+            <div class="photo-container">
+                <img src="PhotoSalma3.jpg" alt="Photo 3" height="100" width="120"><br>
+                <p>Diving is my life </p>
+                <button class="like-btn" onclick="toggleLike(3)"><span id="like-text-3">Like</span>
+                	<span class="like-emoji" id="like-emoji-3">❤️</span></button>
+                <button class="share-btn" onclick="sharePhoto(3)">Share</button>
+            </div>
+
+            
+
+
+
+	        </div>
+	        
+	</div>     
+	 <script>
+	 	 function toggleLike(photoId) {
+            var likeBtn = document.getElementById("like-text-" + photoId);
+            var likeEmoji = document.getElementById("like-emoji-" + photoId);
+
+            if (likeBtn.innerText === "Like") {
+                
+                console.log("Liked photo " + photoId);
+                likeBtn.innerText = "Unlike";
+                likeEmoji.style.display = "inline";
+            } else {
+                
+                console.log("Unliked photo " + photoId);
+                likeBtn.innerText = "Like";
+                likeEmoji.style.display = "none";
+            }
+        }
+        
+
+        function sharePhoto(photoId) {
+            
+            console.log("Shared photo " + photoId);
+
+            
+            var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=URL_DE_VOTRE_IMAGE";
+            
+            window.open(facebookUrl, "_blank");
+
+            
+            var whatsappUrl = "https://api.whatsapp.com/send?text=Check out this photo: URL_DE_VOTRE_IMAGE";
+            
+            window.open(whatsappUrl, "_blank");
+        }
+    </script>  
+
+</body>
+</html>
