@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jean-Pierre</title>
+	<link href="Jean-Pierre.css" rel="stylesheet" type="text/css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#Hina").click(function(){
+				window.location.href = "Hina.html";
+			});	
+			$("#Isabelle").click(function(){
+				window.location.href = "Isabelle.html";
+			});	
+		});	
+
+		function toggleSubscription1() {
+	    var btn = document.getElementById("subscribeButton1");
+	    btn.disabled = true;
+
+	    // Simule l'envoi d'une requête au serveur pour s'abonner ou se désabonner
+	    setTimeout(function() {
+	        btn.textContent = btn.textContent === "S'abonner" ? "Se désabonner" : "S'abonner";
+	        btn.disabled = false;
+	    }, 300); // temps d'attente avant de réactiver le bouton (en millisecondes)
+    }
+		function toggleSubscription2() {
+	    var btn = document.getElementById("subscribeButton2");
+	    btn.disabled = true;
+
+	    // Simule l'envoi d'une requête au serveur pour s'abonner ou se désabo
+	    setTimeout(function() {
+	        btn.textContent = btn.textContent === "Ajouter" ? "Retirer" : "Ajouter";
+	        btn.disabled = false;
+	    }, 300); // temps d'attente avant de réactiver le bouton (en millisecondes)
+	}
+	function toggleSubscription3() {
+	    var btn = document.getElementById("subscribeButton3");
+	    btn.disabled = true;
+
+	    // Simule l'envoi d'une requête au serveur pour s'abonner ou se désabo
+	    setTimeout(function() {
+	        btn.textContent = btn.textContent === "Ajouter" ? "Retirer" : "Ajouter";
+	        btn.disabled = false;
+	    }, 300); // temps d'attente avant de réactiver le bouton (en millisecondes)
+	}
+</script>
+
+
+</head>
+<body>
+	<div id="header">
+		
+	</div>
+	<div id="nav">
+		<img id ="Jean-Pierre" src="Jean-PierrePhoto.jpg"class="rounded-image" alt="Jean-Pierre Segado" height="130" width="80">
+		<div style="display: flex; justify-content: space-between; width: 100%;">
+			<button id="subscribeButton1" class="btn" onclick="toggleSubscription1()">S'abonner</button>
+			<button class="btn"><a href="Messagerie.html">Contacter</a></button>
+		</div>	
+
+
+		<p>Jean-Pierre Segado<br> Paris, France <br> 06 30 26 54 98 </p>
+
+		<div id="logo">
+			<img  src="LogoHina1.webp" class="rounded-image" height="50" width="50">
+			<p>Responsable des enseignements Informatique chez ECE</p>
+			
+		</div>
+		<div id="logo">
+			<img  src="LogoEceJP.jpg"class="rounded-image"  height="50" width="50">
+			<p> Diplômée de l'ECE </p>
+		</div>
+		
+			<p> Les amis de Jean-Pierre Segado:</p>
+			
+			<img id ="Hina" src="HinaPhoto.jpg"class="rounded-image" alt="Hina Manolo" height="50" width="40">
+			<p>Hina Manolo</p>
+			<div style="display: flex; justify-content: space-between; width: 100%;">
+			<button id="subscribeButton2" class="btn" onclick="toggleSubscription2()">Ajouter</button>
+		    </div>
+
+		  
+			<img id ="Isabelle" src="LinPhoto.jpg"class="rounded-image" alt="Isabelle" height="50" width="40">
+			<p> Lin Isabelle </p>
+			<div style="display: flex; justify-content: space-between; width: 100%;">
+			<button id="subscribeButton3" class="btn" onclick="toggleSubscription3()">Ajouter</button>
+		    </div> 
+	      
+    </div>
+    <div id="section">
+			<div id="photos">
+
+				<div class="photo-container">
+                <img src="Photoconf1.jpg" alt="Photo 1" height="100" width="120"><br>
+                <p>Computer Vision Conferences </p>
+                <button class="like-btn" onclick="toggleLike(1)"><span id="like-text-1">Like</span>
+                	<span class="like-emoji" id="like-emoji-1">❤️</span></button>
+                <button class="share-btn" onclick="sharePhoto(1)">Share</button>
+            </div>
+
+            <div class="photo-container">
+                <img src="PhotoECE.png" alt="Photo 2" height="100" width="120"><br>
+                <p>ECE : la Grande école de l'ingénierie en numérique</p>
+                <button class="like-btn" onclick="toggleLike(2)"><span id="like-text-2">Like</span>
+                	<span class="like-emoji" id="like-emoji-2">❤️</span></button>
+                <button class="share-btn" onclick="sharePhoto(2)">Share</button>
+            </div>
+
+            <div class="photo-container">
+                <img src="Quoteteaher1.jpg" alt="Photo 3" height="100" width="120"><br>
+                <p>Professeur de l'année à l'ECE</p>
+                <button class="like-btn" onclick="toggleLike(3)"><span id="like-text-3">Like</span>
+                	<span class="like-emoji" id="like-emoji-3">❤️</span></button>
+                <button class="share-btn" onclick="sharePhoto(3)">Share</button>
+            </div>
+
+            <div class="photo-container">
+                <img src="QuoteJP.jpg" alt="Photo 4" height="100" width="120"><br>
+                <p>Le monde de l'informatique</p>
+                <button class="like-btn" onclick="toggleLike(4)"><span id="like-text-4">Like</span>
+                	<span class="like-emoji" id="like-emoji-4">❤️</span></button>
+                <button class="share-btn" onclick="sharePhoto(4)">Share</button>
+            </div>
+
+
+
+	        </div>
+	        
+	</div>     
+	 <script>
+	 	 function toggleLike(photoId) {
+            var likeBtn = document.getElementById("like-text-" + photoId);
+            var likeEmoji = document.getElementById("like-emoji-" + photoId);
+
+            if (likeBtn.innerText === "Like") {
+                
+                console.log("Liked photo " + photoId);
+                likeBtn.innerText = "Unlike";
+                likeEmoji.style.display = "inline";
+            } else {
+                
+                console.log("Unliked photo " + photoId);
+                likeBtn.innerText = "Like";
+                likeEmoji.style.display = "none";
+            }
+        }
+        
+
+        function sharePhoto(photoId) {
+            
+            console.log("Shared photo " + photoId);
+
+            
+            var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=URL_DE_VOTRE_IMAGE";
+            
+            window.open(facebookUrl, "_blank");
+
+            
+            var whatsappUrl = "https://api.whatsapp.com/send?text=Check out this photo: URL_DE_VOTRE_IMAGE";
+            
+            window.open(whatsappUrl, "_blank");
+        }
+    </script>  
+
+</body>
+</html>
