@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sanmugi</title>
+    <link href="Sanmugi.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#Isabelle").click(function(){
+                window.location.href = "Isabelle.html";
+            }); 
+            $("#Salma").click(function(){
+                window.location.href = "Salma.html";
+            }); 
+        });
+    function toggleSubscription1() {
+        var btn = document.getElementById("subscribeButton");
+        btn.disabled = true;
+
+        // Simule l'envoi d'une requête au serveur pour s'abonner ou se désabonner
+        setTimeout(function() {
+            btn.textContent = btn.textContent === "S'abonner" ? "Se désabonner" : "S'abonner";
+            btn.disabled = false;
+        }, 300); // temps d'attente avant de réactiver le bouton (en millisecondes)
+    }
+    function toggleSubscription2() {
+        var btn = document.getElementById("subscribeButton2");
+        btn.disabled = true;
+
+        // Simule l'envoi d'une requête au serveur pour s'abonner ou se désabonner
+        setTimeout(function() {
+            btn.textContent = btn.textContent === "Ajouter" ? "Retirer" : "Ajouter";
+            btn.disabled = false;
+        }, 300); // temps d'attente avant de réactiver le bouton (en millisecondes)
+    }
+    function toggleSubscription3() {
+        var btn = document.getElementById("subscribeButton3");
+        btn.disabled = true;
+
+        // Simule l'envoi d'une requête au serveur pour s'abonner ou se désabo
+        setTimeout(function() {
+            btn.textContent = btn.textContent === "Ajouter" ? "Retirer" : "Ajouter";
+            btn.disabled = false;
+        }, 300); // temps d'attente avant de réactiver le bouton (en millisecondes)
+    }
+</script>
+
+
+</head>
+<body>
+    <div id="header">
+        <h1>Il faut être joyeux pour être un bon médecin. J'entends par joyeux : porter l'espérance au fond des yeux.</h1>
+    </div>
+    <div id="nav">
+        <img id ="Sanmugi" src="SanmugiPhoto.jpg"class="rounded-image" alt="Samy Sanmugi" height="130" width="90">
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+            <button id="subscribeButton" class="btn" onclick="toggleSubscription1()">S'abonner</button>
+            <button class="btn"><a href="Messagerie.html">Contacter</a></button>
+        </div>  
+
+
+        <p> Samy Sanmugi<br> Lyon, France <br> 06 23 94 27 13</p>
+
+        <div id="logo">
+            <img  src="LogoSorbonne.jpg" class="rounded-image" height="50" width="50">
+            <p> Diplômée de la Faculté de Médecine - Sorbonne Université</p>
+            
+        </div>
+        <div id="logo">
+            <img  src="LogoTeacher.jpg"class="rounded-image"  height="50" width="50">
+            <p>Enseignante à la faculté de médecine à Lyon  </p>
+        </div>
+        <div id="logo">
+            <img  src="LogoChirurgien.jpg"class="rounded-image"  height="50" width="50">
+            <p>Spécialiste dans la chirurgie du coeur: GROUPEMENT CCA "Chirurgiens cardiaques associés" </p>
+        </div>
+        <p> Les amis de Samy Sanmugi:</p>
+            
+            <img id ="Salma" src="SalmaPhoto.png"class="rounded-image" alt="Salma" height="50" width="40">
+            <p>Salma Rezouki</p>
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+            <button id="subscribeButton2" class="btn" onclick="toggleSubscription2()">Ajouter</button>
+            </div>
+
+          
+            <img id ="Isabelle" src="LinPhoto.jpg"class="rounded-image" alt="Isabelle" height="50" width="40">
+            <p>Isabelle Lin</p>
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+            <button id="subscribeButton3" class="btn" onclick="toggleSubscription3()">Ajouter</button>
+            </div> 
+        
+    </div>
+    <div id="section">
+            <div id="photos">
+                <div class="photo-container">   
+                <img src="MedicalPhoto.jpg" alt=" Photo1 "height="100" width="120"><br><p>Nouvelle technique de chirurgie cardiaque</p><br>
+                <button class="like-btn" onclick="toggleLike(1)"><span id="like-text-1">Like</span>
+                        <span class="like-emoji" id="like-emoji-1">❤️</span></button>
+                    <button class="share-btn" onclick="sharePhoto(1)">Share</button>
+                </div>    
+
+                <div class="photo-container">   
+                <img src="PhotoMedical2.jpg" alt="Photo 2"height="100" width="120">
+                <br><p> Une alternative crédible à la chirurgie </p><br>
+                <button class="like-btn" onclick="toggleLike(2)"><span id="like-text-2">Like</span>
+                        <span class="like-emoji" id="like-emoji-2">❤️</span></button>
+                    <button class="share-btn" onclick="sharePhoto(2)">Share</button>
+                </div>   
+
+                <div class="photo-container">   
+
+                <img src="PhotMedical3.webp" alt="Photo 3"height="100" width="120">
+                <br><p>Le célèbre chirurgien cardiaque René Prêtre a ouvert les feux des Mystères de l’UNIL</p><br>
+                <button class="like-btn" onclick="toggleLike(3)"><span id="like-text-3">Like</span>
+                        <span class="like-emoji" id="like-emoji-3">❤️</span></button>
+                    <button class="share-btn" onclick="sharePhoto(3)">Share</button>
+                </div>    
+
+                <div class="photo-container">   
+
+                <img src="PhotoQuote.png" alt="Photo 3"height="100" width="120">
+                <br><p>Quote of the day </p><br>
+                <button class="like-btn" onclick="toggleLike(4)"><span id="like-text-4">Like</span>
+                        <span class="like-emoji" id="like-emoji-4">❤️</span></button>
+                    <button class="share-btn" onclick="sharePhoto(4)">Share</button>
+                </div>
+
+
+             
+            </div>
+            
+    </div>    
+    <script>
+         function toggleLike(photoId) {
+            var likeBtn = document.getElementById("like-text-" + photoId);
+            var likeEmoji = document.getElementById("like-emoji-" + photoId);
+
+            if (likeBtn.innerText === "Like") {
+                
+                console.log("Liked photo " + photoId);
+                likeBtn.innerText = "Unlike";
+                likeEmoji.style.display = "inline";
+            } else {
+                
+                console.log("Unliked photo " + photoId);
+                likeBtn.innerText = "Like";
+                likeEmoji.style.display = "none";
+            }
+        }
+        
+
+        function sharePhoto(photoId) {
+            
+            console.log("Shared photo " + photoId);
+
+            
+            var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=URL_DE_VOTRE_IMAGE";
+            
+            window.open(facebookUrl, "_blank");
+
+            
+            var whatsappUrl = "https://api.whatsapp.com/send?text=Check out this photo: URL_DE_VOTRE_IMAGE";
+            
+            window.open(whatsappUrl, "_blank");
+        }
+    </script>     
+
+</body>
+</html>
