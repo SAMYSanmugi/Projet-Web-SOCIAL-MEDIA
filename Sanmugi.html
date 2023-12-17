@@ -95,20 +95,78 @@
     </div>
     <div id="section">
             <div id="photos">
+                <div class="photo-container">   
                 <img src="MedicalPhoto.jpg" alt=" Photo1 "height="100" width="120"><br><p>Nouvelle technique de chirurgie cardiaque</p><br>
+                <button class="like-btn" onclick="toggleLike(1)"><span id="like-text-1">Like</span>
+                        <span class="like-emoji" id="like-emoji-1">❤️</span></button>
+                    <button class="share-btn" onclick="sharePhoto(1)">Share</button>
+                </div>    
 
+                <div class="photo-container">   
                 <img src="PhotoMedical2.jpg" alt="Photo 2"height="100" width="120">
                 <br><p> Une alternative crédible à la chirurgie </p><br>
+                <button class="like-btn" onclick="toggleLike(2)"><span id="like-text-2">Like</span>
+                        <span class="like-emoji" id="like-emoji-2">❤️</span></button>
+                    <button class="share-btn" onclick="sharePhoto(2)">Share</button>
+                </div>   
+
+                <div class="photo-container">   
 
                 <img src="PhotMedical3.webp" alt="Photo 3"height="100" width="120">
                 <br><p>Le célèbre chirurgien cardiaque René Prêtre a ouvert les feux des Mystères de l’UNIL</p><br>
+                <button class="like-btn" onclick="toggleLike(3)"><span id="like-text-3">Like</span>
+                        <span class="like-emoji" id="like-emoji-3">❤️</span></button>
+                    <button class="share-btn" onclick="sharePhoto(3)">Share</button>
+                </div>    
+
+                <div class="photo-container">   
 
                 <img src="PhotoQuote.png" alt="Photo 3"height="100" width="120">
                 <br><p>Quote of the day </p><br>
+                <button class="like-btn" onclick="toggleLike(4)"><span id="like-text-4">Like</span>
+                        <span class="like-emoji" id="like-emoji-4">❤️</span></button>
+                    <button class="share-btn" onclick="sharePhoto(4)">Share</button>
+                </div>
 
+
+             
             </div>
             
-    </div>       
+    </div>    
+    <script>
+         function toggleLike(photoId) {
+            var likeBtn = document.getElementById("like-text-" + photoId);
+            var likeEmoji = document.getElementById("like-emoji-" + photoId);
+
+            if (likeBtn.innerText === "Like") {
+                
+                console.log("Liked photo " + photoId);
+                likeBtn.innerText = "Unlike";
+                likeEmoji.style.display = "inline";
+            } else {
+                
+                console.log("Unliked photo " + photoId);
+                likeBtn.innerText = "Like";
+                likeEmoji.style.display = "none";
+            }
+        }
+        
+
+        function sharePhoto(photoId) {
+            
+            console.log("Shared photo " + photoId);
+
+            
+            var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=URL_DE_VOTRE_IMAGE";
+            
+            window.open(facebookUrl, "_blank");
+
+            
+            var whatsappUrl = "https://api.whatsapp.com/send?text=Check out this photo: URL_DE_VOTRE_IMAGE";
+            
+            window.open(whatsappUrl, "_blank");
+        }
+    </script>     
 
 </body>
 </html>
