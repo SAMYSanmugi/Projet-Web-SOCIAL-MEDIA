@@ -1,0 +1,77 @@
+#logo{
+	float: left;
+}
+#titre{
+	
+
+	text-align: center;
+	font-size: 70px;
+	color: white;
+	text-shadow: 4px 2px 3px black;
+	margin-top: 50px;
+
+}
+#nav1{
+	background:url('fond reseau2.png');
+	filter: drop-shadow(black 0rem 0.5rem 9px);
+	padding-bottom: 100px auto;
+	margin-bottom: 40px;
+	padding: 50px;
+
+}
+#nav{
+	text-align: center;
+}
+/*
+#section{
+	width:auto;
+	float:left;
+	background:url('background.gif');
+	height: 640px;
+	width: auto;
+	border: solid black;
+	padding: 5px;
+}
+*/
+
+#icone{
+	height : 70px;
+	width : 85px;
+	margin-right:30px;
+
+}
+
+
+h1{
+	clear: both;
+	margin-top: 10px;
+	
+	text-align: center;
+	color: white;
+	font-size: 100px;
+	padding-bottom: 30px;
+	text-shadow: 4px 2px 3px black;
+}
+
+
+h2{
+	
+	text-align: center;
+	font-size: 45px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	color: white;
+	text-shadow: 4px 2px 3px black;
+}
+p{
+	text-align: center;
+	font-size: 18px;
+}
+	
+
+#fin{
+	text-align: center;
+	background:linear-gradient(127deg, rgba(0, 255, 255, 0.5), rgba(255, 255, 0, 0.5) 80.71%);
+	clear: both;
+
+}
