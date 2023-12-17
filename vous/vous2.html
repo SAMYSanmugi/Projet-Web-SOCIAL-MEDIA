@@ -10,12 +10,11 @@
 </head>
 <body>
 
-	<form id="cvForm">
 	<div id="nav1">
 		<a href="Vous.html" style="margin-left:10px"><button class="button">Retourner sur Vous</button></a><br>
 		<h2>Générer votre CV de rêve</h2><br>
 
-		<form>
+		<form action="vous.php" method="post">
 			<h3>Vos coordonnées :</h3>
 			<table>
 				<tr>
@@ -126,31 +125,11 @@
 				</tr>
 			</table><br><br><br>
 
-			<button class="button" style="margin-left: 62%;" onclick="genererCV()">Générer le CV</button>
+			<button class="button" style="margin-left: 62%;">Générer le CV</button>
 		</form>
 	</div>
 	</form>
 	
-
-	<div id="cv">
-        <h1 id="cvNomPrenom"></h1>
-        <h4>Coordonnées</h4>
-        <p id="coordonnes"></p>
-        <h4>Profil</h4>
-        <p id="pro"></p>
-        <h4>Competence</h4>
-        <p id="comp"></p>
-        <h4>interet</h4>
-        <p id="int"></p>
-        <h4>langues</h4>
-        <p id="lang"></p>
-        <h4>Expérience:</h4>
-        <p id="cvExperience"></p>
-        <h4>formation</h4>
-        <p id="fo"></p>
-    </div>
-
-    
 	<footer id="fin"><a href="Accueil.html">Accueil</a>
  		<a href="MonReseau.html">Mon Réseau</a>
  		<a href="Vous.html">Vous</a>
