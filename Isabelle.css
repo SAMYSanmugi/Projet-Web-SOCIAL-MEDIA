@@ -9,7 +9,7 @@
 #nav{
 	
 	background-color:darkolivegreen ;
-	height: 770px;
+	height: 1020px;
 	width: 200px;
 	float: left;
 	padding: 50px;
@@ -21,7 +21,7 @@
 	width:auto;
 	float:left;
 	background:#FBE4DB;
-	height: 870px;
+	height: 1120px;
 	width: 899px;
 	/*border: solid black;*/
 	/*padding: 267px;*/
@@ -67,4 +67,22 @@
 #photos {
     padding-left: 20px;
     padding-top: 20px;
+    display: inline-block;
+    text-align: left;
 }
+
+
+.photo-container {
+    margin-bottom: 20px;
+}
+
+.like-btn, .share-btn {
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 10px;
+}
+.like-emoji {
+ display: none;
+}
+
+
